@@ -6,3 +6,12 @@
 #sidebar a {
 	color: black;
 }
+
+.box {
+	width: 50%;
+    margin-left: 20%
+}
+
+.ascii_name {
+	max-width: 75%
+}
