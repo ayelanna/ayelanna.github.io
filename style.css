@@ -25,3 +25,15 @@
 	max-width: 6%;
 	margin-left: 1em;
 }
+
+@media only screen and (max-width: 600px) {
+
+	.box {
+		margin-top: 0%;
+	}
+
+	.centered {
+		width: 100%;
+	}
+
+}
