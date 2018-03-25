@@ -12,6 +12,9 @@
     margin-left: 20%
 }
 
-.ascii_name {
-	max-width: 100%
+.centered {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
