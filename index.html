@@ -11,6 +11,8 @@
 	<meta name="theme-color" content="#ffffff">
 
 	<link href="style.css" rel="stylesheet" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/snowfall.js" type="text/javascript"></script>
 
 
 	<!--		 ▄████▄   ██▀███  ▓█████ ▄▄▄     ▄▄▄█████▓▓█████ ▓█████▄     ▄▄▄▄ ▓██   ██▓
@@ -45,12 +47,16 @@
 		</ul>
 	</nav>
 
-		<div class="box">
+	<canvas id="snowfall"></canvas>
 
-			<img src="https://www.thesun.co.uk/wp-content/uploads/2018/02/nintchdbpict000383601351-e1518097115772.jpg?strip=all&w=960" style="max-width: 100%">
-
-	</div>
-
+	<script>
+		$(document).ready(function() {
+			$("#snowfall").Snowfall({
+				amount: 500 //Amount of particles
+			});
+		});
+	</script>
+	
 </body>
 
 
