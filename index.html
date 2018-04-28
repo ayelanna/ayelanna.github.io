@@ -12,7 +12,25 @@
 
 	<link href="style.css" rel="stylesheet" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="snowfall.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+			var $count = 2;
+			var $row1 = $("#row1").clone();
+
+			setInterval(function() {
+
+				var $row = $("#row" + $count).clone().css("display", "inline-block");
+				$("#row1").html($row);
+				if ($count < 6) { 
+					$count++;
+				} else {
+					$count = 2;
+					$("#row1").html($row1);
+				}
+			}, 5 * 1000);
+		});
+	</script>
 
 
 	<!--		 ▄████▄   ██▀███  ▓█████ ▄▄▄     ▄▄▄█████▓▓█████ ▓█████▄     ▄▄▄▄ ▓██   ██▓
@@ -21,7 +39,7 @@
 				▒▓▓▄ ▄██▒▒██▀▀█▄  ▒▓█  ▄░██▄▄▄▄██░ ▓██▓ ░ ▒▓█  ▄ ░▓█▄   ▌   ▒██░█▀  ░ ▐██▓░
 				▒ ▓███▀ ░░██▓ ▒██▒░▒████▒▓█   ▓██▒ ▒██▒ ░ ░▒████▒░▒████▓    ░▓█  ▀█▓░ ██▒▓░
 				░ ░▒ ▒  ░░ ▒▓ ░▒▓░░░ ▒░ ░▒▒   ▓▒█░ ▒ ░░   ░░ ▒░ ░ ▒▒▓  ▒    ░▒▓███▀▒ ██▒▒▒ 
-				  ░  ▒     ░▒ ░ ▒░2 ░ ░  ░ ▒   ▒▒ ░   ░     ░ ░  ░ ░ ▒  ▒    ▒░▒   ░▓██ ░▒░ 
+				  ░  ▒     ░▒ ░ ▒░ ░ ░  ░ ▒   ▒▒ ░   ░     ░ ░  ░ ░ ▒  ▒    ▒░▒   ░▓██ ░▒░ 
 				░          ░░   ░    ░    ░   ▒    ░         ░    ░ ░  ░     ░    ░▒ ▒ ░░  
 				░ ░         ░        ░  ░     ░  ░           ░  ░   ░        ░     ░ ░     
 
@@ -36,6 +54,7 @@
 	░      ░    ▒ ░  ░ ░      ░   ░  ░  ░     ░ ░   ░  ▒ ░  ░ ░   ░         ░  ░░ ░  ░░   ░  ▒ ░░  ░  ░    ░      
 	       ░    ░      ░  ░   ░  ░      ░           ░  ░      ░  ░░ ░       ░  ░  ░   ░      ░        ░           
 	                                                              ░                                         	-->
+
 </head>
 
 <body>
@@ -44,7 +63,7 @@
 	</nav>
 
 	<div id="circles">
-		<div class="row">
+		<span id="row1" class="row">
 			<img class="grid-item" src="images/1.png">
 			<img class="grid-item" src="images/2.png">
 			<img class="grid-item" src="images/3.png">
@@ -75,9 +94,47 @@
 			<img class="grid-item" src="images/28.png">
 			<img class="grid-item" src="images/29.png">
 			<img class="grid-item" src="images/30.png">
+		</span>
+		<span id="row2" class="hidden row">
+			<img class="grid-item" src="images/22.png">
+			<img class="grid-item" src="images/23.png">
+			<img class="grid-item" src="images/24.png">
+			<img class="grid-item" src="images/25.png">
+			<img class="grid-item" src="images/26.png">
+			<img class="grid-item" src="images/27.png">
+			<img class="grid-item" src="images/28.png">
+			<img class="grid-item" src="images/29.png">
+			<img class="grid-item" src="images/30.png">
 			<img class="grid-item" src="images/31.png">
 			<img class="grid-item" src="images/32.png">
 			<img class="grid-item" src="images/33.png">
+			<img class="grid-item" src="images/34.png">
+			<img class="grid-item" src="images/35.png">
+			<img class="grid-item" src="images/36.png">
+			<img class="grid-item" src="images/37.png">
+			<img class="grid-item" src="images/38.png">
+			<img class="grid-item" src="images/39.png">
+			<img class="grid-item" src="images/40.png">
+			<img class="grid-item" src="images/41.png">
+			<img class="grid-item" src="images/42.png">
+			<img class="grid-item" src="images/42.png">
+			<img class="grid-item" src="images/43.png">
+			<img class="grid-item" src="images/44.jpg">
+			<img class="grid-item" src="images/45.png">
+			<img class="grid-item" src="images/46.png">
+			<img class="grid-item" src="images/47.png">
+			<img class="grid-item" src="images/48.png">
+			<img class="grid-item" src="images/49.png">
+			<img class="grid-item" src="images/50.png">
+			<img class="grid-item" src="images/51.png">
+			<img class="grid-item" src="images/52.png">
+			<img class="grid-item" src="images/53.png">
+			<img class="grid-item" src="images/54.png">
+			<img class="grid-item" src="images/55.png">
+			<img class="grid-item" src="images/56.png">
+			<img class="grid-item" src="images/57.png">
+		</span>
+		<span id="row3" class="hidden row">
 			<img class="grid-item" src="images/34.png">
 			<img class="grid-item" src="images/35.png">
 			<img class="grid-item" src="images/36.png">
@@ -94,6 +151,22 @@
 			<img class="grid-item" src="images/47.png">
 			<img class="grid-item" src="images/48.png">
 			<img class="grid-item" src="images/49.png">
+			<img class="grid-item" src="images/50.png">
+			<img class="grid-item" src="images/51.png">
+			<img class="grid-item" src="images/52.png">
+			<img class="grid-item" src="images/53.png">
+			<img class="grid-item" src="images/54.png">
+			<img class="grid-item" src="images/55.png">
+			<img class="grid-item" src="images/56.png">
+			<img class="grid-item" src="images/57.png">
+			<img class="grid-item" src="images/58.png">
+			<img class="grid-item" src="images/59.png">
+			<img class="grid-item" src="images/60.png">
+			<img class="grid-item" src="images/61.png">
+			<img class="grid-item" src="images/62.png">
+			<img class="grid-item" src="images/63.png">
+		</span>
+		<span id="row4" class="hidden row">
 			<img class="grid-item" src="images/50.png">
 			<img class="grid-item" src="images/51.png">
 			<img class="grid-item" src="images/52.png">
@@ -132,6 +205,8 @@
 			<img class="grid-item" src="images/85.png">
 			<img class="grid-item" src="images/86.png">
 			<img class="grid-item" src="images/87.png">
+		</span>
+		<span id="row5" class="hidden row">
 			<img class="grid-item" src="images/88.png">
 			<img class="grid-item" src="images/89.png">
 			<img class="grid-item" src="images/90.png">
@@ -181,7 +256,7 @@
 			<img class="grid-item" src="images/134.png">
 			<img class="grid-item" src="images/135.png">
 			<img class="grid-item" src="images/136.png">
-		</div>
+		</span>
 <!-- 		<div class="row">
 			
 		</div> -->
