@@ -2,9 +2,9 @@
 <head>
 	<title>alanna gilchrist</title>
 
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.jpg">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.jpg">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.jpg">
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#da532c">
@@ -15,19 +15,29 @@
 	<script type="text/javascript">
 
 		$(document).ready(function() {
-			var $count = 2;
+			// var $count = 2;
 			var $row1 = $("#row1").clone();
+
+			var $images = [];
+
+			for (i = 1; i < 137; i++) {
+				$images.push("images/" + i + ".jpg");
+			}
 
 			setInterval(function() {
 
-				var $row = $("#row" + $count).clone().css("display", "inline-block");
-				$("#row1").html($row);
-				if ($count < 6) { 
-					$count++;
-				} else {
-					$count = 2;
-					$("#row1").html($row1);
+				var $row = Math.floor(Math.random() * $images.length);
+				if ($row > 130) {
+					$row = 60;
 				}
+
+				$("#one").attr("src", $images[$row]);
+				$("#two").attr("src", $images[$row + 1]);
+				$("#three").attr("src", $images[$row + 2]);
+				$("#four").attr("src", $images[$row + 3]);
+				$("#five").attr("src", $images[$row + 4]);
+				$("#six").attr("src", $images[$row + 5]);
+
 			}, 5 * 1000);
 		});
 	</script>
@@ -62,204 +72,151 @@
 			<p>alanna gilchrist <img src="favicon.ico" style="height: 20px;"> <a href="/about">about</a> / <a href="/works">works</a> / <a href="cv.pdf">cv</a></p>
 	</nav>
 
-	<div id="circles">
-		<span id="row1" class="row">
-			<img class="grid-item" src="images/1.png">
-			<img class="grid-item" src="images/2.png">
-			<img class="grid-item" src="images/3.png">
-			<img class="grid-item" src="images/4.png">
-			<img class="grid-item" src="images/5.png">
-			<img class="grid-item" src="images/6.png">
-			<img class="grid-item" src="images/7.png">
-			<img class="grid-item" src="images/8.png">
-			<img class="grid-item" src="images/9.png">
-			<img class="grid-item" src="images/10.png">
-			<img class="grid-item" src="images/11.png">
-			<img class="grid-item" src="images/12.png">
-			<img class="grid-item" src="images/13.jpg">
-			<img class="grid-item" src="images/14.png">
-			<img class="grid-item" src="images/15.png">
-			<img class="grid-item" src="images/16.png">
-			<img class="grid-item" src="images/17.png">
-			<img class="grid-item" src="images/18.png">
-			<img class="grid-item" src="images/19.png">
-			<img class="grid-item" src="images/20.png">
-			<img class="grid-item" src="images/21.png">
-			<img class="grid-item" src="images/22.png">
-			<img class="grid-item" src="images/23.png">
-			<img class="grid-item" src="images/24.png">
-			<img class="grid-item" src="images/25.png">
-			<img class="grid-item" src="images/26.png">
-			<img class="grid-item" src="images/27.png">
-			<img class="grid-item" src="images/28.png">
-			<img class="grid-item" src="images/29.png">
-			<img class="grid-item" src="images/30.png">
-		</span>
-		<span id="row2" class="hidden row">
-			<img class="grid-item" src="images/22.png">
-			<img class="grid-item" src="images/23.png">
-			<img class="grid-item" src="images/24.png">
-			<img class="grid-item" src="images/25.png">
-			<img class="grid-item" src="images/26.png">
-			<img class="grid-item" src="images/27.png">
-			<img class="grid-item" src="images/28.png">
-			<img class="grid-item" src="images/29.png">
-			<img class="grid-item" src="images/30.png">
-			<img class="grid-item" src="images/31.png">
-			<img class="grid-item" src="images/32.png">
-			<img class="grid-item" src="images/33.png">
-			<img class="grid-item" src="images/34.png">
-			<img class="grid-item" src="images/35.png">
-			<img class="grid-item" src="images/36.png">
-			<img class="grid-item" src="images/37.png">
-			<img class="grid-item" src="images/38.png">
-			<img class="grid-item" src="images/39.png">
-			<img class="grid-item" src="images/40.png">
-			<img class="grid-item" src="images/41.png">
-			<img class="grid-item" src="images/42.png">
-			<img class="grid-item" src="images/42.png">
-			<img class="grid-item" src="images/43.png">
-			<img class="grid-item" src="images/44.jpg">
-			<img class="grid-item" src="images/45.png">
-			<img class="grid-item" src="images/46.png">
-			<img class="grid-item" src="images/47.png">
-			<img class="grid-item" src="images/48.png">
-			<img class="grid-item" src="images/49.png">
-			<img class="grid-item" src="images/50.png">
-			<img class="grid-item" src="images/51.png">
-			<img class="grid-item" src="images/52.png">
-			<img class="grid-item" src="images/53.png">
-			<img class="grid-item" src="images/54.png">
-			<img class="grid-item" src="images/55.png">
-			<img class="grid-item" src="images/56.png">
-			<img class="grid-item" src="images/57.png">
-		</span>
-		<span id="row3" class="hidden row">
-			<img class="grid-item" src="images/34.png">
-			<img class="grid-item" src="images/35.png">
-			<img class="grid-item" src="images/36.png">
-			<img class="grid-item" src="images/37.png">
-			<img class="grid-item" src="images/38.png">
-			<img class="grid-item" src="images/39.png">
-			<img class="grid-item" src="images/40.png">
-			<img class="grid-item" src="images/41.png">
-			<img class="grid-item" src="images/42.png">
-			<img class="grid-item" src="images/43.png">
-			<img class="grid-item" src="images/44.jpg">
-			<img class="grid-item" src="images/45.png">
-			<img class="grid-item" src="images/46.png">
-			<img class="grid-item" src="images/47.png">
-			<img class="grid-item" src="images/48.png">
-			<img class="grid-item" src="images/49.png">
-			<img class="grid-item" src="images/50.png">
-			<img class="grid-item" src="images/51.png">
-			<img class="grid-item" src="images/52.png">
-			<img class="grid-item" src="images/53.png">
-			<img class="grid-item" src="images/54.png">
-			<img class="grid-item" src="images/55.png">
-			<img class="grid-item" src="images/56.png">
-			<img class="grid-item" src="images/57.png">
-			<img class="grid-item" src="images/58.png">
-			<img class="grid-item" src="images/59.png">
-			<img class="grid-item" src="images/60.png">
-			<img class="grid-item" src="images/61.png">
-			<img class="grid-item" src="images/62.png">
-			<img class="grid-item" src="images/63.png">
-		</span>
-		<span id="row4" class="hidden row">
-			<img class="grid-item" src="images/50.png">
-			<img class="grid-item" src="images/51.png">
-			<img class="grid-item" src="images/52.png">
-			<img class="grid-item" src="images/53.png">
-			<img class="grid-item" src="images/54.png">
-			<img class="grid-item" src="images/55.png">
-			<img class="grid-item" src="images/56.png">
-			<img class="grid-item" src="images/57.png">
-			<img class="grid-item" src="images/58.png">
-			<img class="grid-item" src="images/59.png">
-			<img class="grid-item" src="images/60.png">
-			<img class="grid-item" src="images/61.png">
-			<img class="grid-item" src="images/62.png">
-			<img class="grid-item" src="images/63.png">
-			<img class="grid-item" src="images/64.png">
-			<img class="grid-item" src="images/65.png">
-			<img class="grid-item" src="images/66.png">
-			<img class="grid-item" src="images/67.png">
-			<img class="grid-item" src="images/68.png">
-			<img class="grid-item" src="images/69.png">
-			<img class="grid-item" src="images/70.png">
-			<img class="grid-item" src="images/71.png">
-			<img class="grid-item" src="images/72.png">
-			<img class="grid-item" src="images/73.png">
-			<img class="grid-item" src="images/74.png">
-			<img class="grid-item" src="images/75.png">
-			<img class="grid-item" src="images/76.png">
-			<img class="grid-item" src="images/77.png">
-			<img class="grid-item" src="images/78.png">
-			<img class="grid-item" src="images/79.png">
-			<img class="grid-item" src="images/80.png">
-			<img class="grid-item" src="images/81.jpg">
-			<img class="grid-item" src="images/82.png">
-			<img class="grid-item" src="images/83.png">
-			<img class="grid-item" src="images/84.png">
-			<img class="grid-item" src="images/85.png">
-			<img class="grid-item" src="images/86.png">
-			<img class="grid-item" src="images/87.png">
-		</span>
-		<span id="row5" class="hidden row">
-			<img class="grid-item" src="images/88.png">
-			<img class="grid-item" src="images/89.png">
-			<img class="grid-item" src="images/90.png">
-			<img class="grid-item" src="images/91.png">
-			<img class="grid-item" src="images/92.png">
-			<img class="grid-item" src="images/93.png">
-			<img class="grid-item" src="images/94.png">
-			<img class="grid-item" src="images/95.png">
-			<img class="grid-item" src="images/96.png">
-			<img class="grid-item" src="images/97.png">
-			<img class="grid-item" src="images/98.png">
-			<img class="grid-item" src="images/99.png">
-			<img class="grid-item" src="images/100.png">
-			<img class="grid-item" src="images/101.png">
-			<img class="grid-item" src="images/102.png">
-			<img class="grid-item" src="images/103.png">
-			<img class="grid-item" src="images/104.png">
-			<img class="grid-item" src="images/105.png">
-			<img class="grid-item" src="images/106.png">
-			<img class="grid-item" src="images/107.png">
-			<img class="grid-item" src="images/108.png">
-			<img class="grid-item" src="images/109.png">
-			<img class="grid-item" src="images/110.png">
-			<img class="grid-item" src="images/111.png">
-			<img class="grid-item" src="images/112.png">
-			<img class="grid-item" src="images/113.png">
-			<img class="grid-item" src="images/114.png">
-			<img class="grid-item" src="images/115.png">
-			<img class="grid-item" src="images/116.png">
-			<img class="grid-item" src="images/117.png">
-			<img class="grid-item" src="images/118.png">
-			<img class="grid-item" src="images/119.png">
-			<img class="grid-item" src="images/120.png">
-			<img class="grid-item" src="images/121.png">
-			<img class="grid-item" src="images/122.png">
-			<img class="grid-item" src="images/123.png">
-			<img class="grid-item" src="images/124.png">
-			<img class="grid-item" src="images/125.png">
-			<img class="grid-item" src="images/126.png">
-			<img class="grid-item" src="images/127.png">
-			<img class="grid-item" src="images/128.png">
-			<img class="grid-item" src="images/129.png">
-			<img class="grid-item" src="images/130.png">
-			<img class="grid-item" src="images/131.png">
-			<img class="grid-item" src="images/132.png">
-			<img class="grid-item" src="images/133.png">
-			<img class="grid-item" src="images/134.png">
-			<img class="grid-item" src="images/135.png">
-			<img class="grid-item" src="images/136.png">
-		</span>
-<!-- 		<div class="row">
-			
-		</div> -->
+	<div class="row">
+		<div class="wrapper"><img id="one" class="pic" src="images/1.jpg"></div>
+		<div class="wrapper"><img id="two" class="pic" src="images/2.jpg"></div>
+		<div class="wrapper"><img id="three" class="pic" src="images/3.jpg"></div>
+	</div>
+	<div class="row">
+		<div class="wrapper"><img id="four" class="pic" src="images/4.jpg"></div>
+		<div class="wrapper"><img id="five" class="pic" src="images/5.jpg"></div>
+		<div class="wrapper"><img id="six" class="pic" src="images/6.jpg"></div>
+	</div>
+
+		<div style="display: none;">
+			<img src="images/7.jpg">
+			<img src="images/8.jpg">
+			<img src="images/9.jpg">
+			<img src="images/10.jpg">
+			<img src="images/11.jpg">
+			<img src="images/12.jpg">
+			<img src="images/13.jpg">
+			<img src="images/14.jpg">
+			<img src="images/15.jpg">
+			<img src="images/16.jpg">
+			<img src="images/17.jpg">
+			<img src="images/18.jpg">
+			<img src="images/19.jpg">
+			<img src="images/20.jpg">
+			<img src="images/21.jpg">
+			<img src="images/22.jpg">
+			<img src="images/23.jpg">
+			<img src="images/24.jpg">
+			<img src="images/25.jpg">
+			<img src="images/26.jpg">
+			<img src="images/27.jpg">
+			<img src="images/28.jpg">
+			<img src="images/29.jpg">
+			<img src="images/30.jpg">
+			<img src="images/31.jpg">
+			<img src="images/32.jpg">
+			<img src="images/33.jpg">
+			<img src="images/34.jpg">
+			<img src="images/35.jpg">
+			<img src="images/36.jpg">
+			<img src="images/37.jpg">
+			<img src="images/38.jpg">
+			<img src="images/39.jpg">
+			<img src="images/40.jpg">
+			<img src="images/41.jpg">
+			<img src="images/42.jpg">
+			<img src="images/42.jpg">
+			<img src="images/43.jpg">
+			<img src="images/44.jpg">
+			<img src="images/45.jpg">
+			<img src="images/46.jpg">
+			<img src="images/47.jpg">
+			<img src="images/48.jpg">
+			<img src="images/49.jpg">
+			<img src="images/50.jpg">
+			<img src="images/51.jpg">
+			<img src="images/52.jpg">
+			<img src="images/53.jpg">
+			<img src="images/54.jpg">
+			<img src="images/55.jpg">
+			<img src="images/56.jpg">
+			<img src="images/57.jpg">
+			<img src="images/58.jpg">
+			<img src="images/59.jpg">
+			<img src="images/60.jpg">
+			<img src="images/61.jpg">
+			<img src="images/62.jpg">
+			<img src="images/63.jpg">
+			<img src="images/64.jpg">
+			<img src="images/65.jpg">
+			<img src="images/66.jpg">
+			<img src="images/67.jpg">
+			<img src="images/68.jpg">
+			<img src="images/69.jpg">
+			<img src="images/70.jpg">
+			<img src="images/71.jpg">
+			<img src="images/72.jpg">
+			<img src="images/73.jpg">
+			<img src="images/74.jpg">
+			<img src="images/75.jpg">
+			<img src="images/76.jpg">
+			<img src="images/77.jpg">
+			<img src="images/78.jpg">
+			<img src="images/79.jpg">
+			<img src="images/80.jpg">
+			<img src="images/81.jpg">
+			<img src="images/82.jpg">
+			<img src="images/83.jpg">
+			<img src="images/84.jpg">
+			<img src="images/85.jpg">
+			<img src="images/86.jpg">
+			<img src="images/87.jpg">
+			<img src="images/88.jpg">
+			<img src="images/89.jpg">
+			<img src="images/90.jpg">
+			<img src="images/91.jpg">
+			<img src="images/92.jpg">
+			<img src="images/93.jpg">
+			<img src="images/94.jpg">
+			<img src="images/95.jpg">
+			<img src="images/96.jpg">
+			<img src="images/97.jpg">
+			<img src="images/98.jpg">
+			<img src="images/99.jpg">
+			<img src="images/100.jpg">
+			<img src="images/101.jpg">
+			<img src="images/102.jpg">
+			<img src="images/103.jpg">
+			<img src="images/104.jpg">
+			<img src="images/105.jpg">
+			<img src="images/106.jpg">
+			<img src="images/107.jpg">
+			<img src="images/108.jpg">
+			<img src="images/109.jpg">
+			<img src="images/110.jpg">
+			<img src="images/111.jpg">
+			<img src="images/112.jpg">
+			<img src="images/113.jpg">
+			<img src="images/114.jpg">
+			<img src="images/115.jpg">
+			<img src="images/116.jpg">
+			<img src="images/117.jpg">
+			<img src="images/118.jpg">
+			<img src="images/119.jpg">
+			<img src="images/120.jpg">
+			<img src="images/121.jpg">
+			<img src="images/122.jpg">
+			<img src="images/123.jpg">
+			<img src="images/124.jpg">
+			<img src="images/125.jpg">
+			<img src="images/126.jpg">
+			<img src="images/127.jpg">
+			<img src="images/128.jpg">
+			<img src="images/129.jpg">
+			<img src="images/130.jpg">
+			<img src="images/131.jpg">
+			<img src="images/132.jpg">
+			<img src="images/133.jpg">
+			<img src="images/134.jpg">
+			<img src="images/135.jpg">
+			<img src="images/136.jpg">
+		</div>
+
 	</div>
 
 </body>
