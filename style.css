@@ -1,9 +1,9 @@
 #sidebar { 
 	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-	position: sticky;
+	position: absolute;
 	background: white;
 	width: 100%;
-	display: inline-block;
+	display: block;
 	text-align: right;
 	z-index: 999;
 }
