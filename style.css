@@ -16,7 +16,7 @@
 .box {
 	width: 75%;
 	margin-left: 15%;
-	margin-top: -12%;
+	/*margin-top: -12%;*/
 }
 
 .centered {
@@ -48,11 +48,24 @@
     z-index: 1;
 }
 
+.my-gallery {
+	margin-top: 5%;
+	margin-left: 10%;
+}
 
+figure {
+	display: inline-flex;
+}
+
+.caption {
+	display: none;
+}
+
+/*
 .homelogo {
 	max-width: 6%;
 	margin-left: 1em;
-}
+}*/
 
 @media only screen and (min-width: 1113px) and (max-width: 1300px) {
 
@@ -109,10 +122,6 @@
 	.row {
 	    margin-left: 2em;
 	    display: grid;
-	}
-
-	.box {
-		margin-top: 0%;
 	}
 
 	.centered {
