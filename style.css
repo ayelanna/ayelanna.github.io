@@ -1,10 +1,11 @@
 #sidebar { 
-	font-family: "Courier New", Courier, monospace;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 	position: sticky;
 	background: white;
 	width: 100%;
 	display: inline-block;
 	text-align: right;
+	z-index: 999;
 }
 
 #sidebar a {
@@ -44,6 +45,7 @@
 
 .pic {
     width: -webkit-fill-available;
+    z-index: 1;
 }
 
 
@@ -67,8 +69,8 @@
 @media only screen and (min-width: 845px) and (max-width: 1112px) {
 
 	.row {
-	    margin-left: 3em;
-	    margin-top: -2em;
+	    margin-left: 0em;
+	    margin-top: -3em;
 	}
 
 	.wrapper {
@@ -79,7 +81,7 @@
 @media only screen and (min-width: 680px) and (max-width: 844px) {
 
 	.row {
-		margin-left: 2em;
+		margin-left: 0em;
 	}
 
 	.wrapper {
